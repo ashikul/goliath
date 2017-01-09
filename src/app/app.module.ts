@@ -19,13 +19,17 @@ import { ItemDetailPage } from '../pages/item-detail/item-detail';
 import { MenuPage } from '../pages/menu/menu';
 import { SettingsPage } from '../pages/settings/settings';
 import { SearchPage } from '../pages/search/search';
+import {ShopMasterPage} from '../pages/shop-master/shop-master';
 
 import { User } from '../providers/user';
 import { Api } from '../providers/api';
 import { Settings } from '../providers/settings';
 import { Items } from '../mocks/providers/items';
+import {Shops} from '../mocks/providers/shops';
+import {UserOrders} from '../mocks/providers/userOrders';
 
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
+import {UserMainPage} from "../pages/UserMain/userMain";
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -69,7 +73,9 @@ let pages = [
   ItemCreatePage,
   MenuPage,
   SettingsPage,
-  SearchPage
+  SearchPage,
+  UserMainPage,
+    ShopMasterPage
 ];
 
 export function declarations() {
@@ -87,6 +93,8 @@ export function providers() {
     User,
     Api,
     Items,
+      Shops,
+      UserOrders,
 
     { provide: Settings, useFactory: provideSettings, deps: [ Storage ] },
     // Keep this to enable Ionic's runtime error handling during development

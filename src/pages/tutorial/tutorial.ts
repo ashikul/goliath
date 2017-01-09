@@ -6,7 +6,7 @@ import { WelcomePage } from '../welcome/welcome';
 
 import { TranslateService } from 'ng2-translate/ng2-translate';
 
-
+import { LoginPage } from '../log'
 
 export interface Slide {
   title: string;
