@@ -60,6 +60,7 @@ export class MyApp {
     { title: 'Search', component: SearchPage },
     { title: 'User Main', component: UserMainPage },
     { title: 'User Shops', component: ShopMasterPage }
+  
   ]
 
   constructor(translate: TranslateService, platform: Platform, settings: Settings) {

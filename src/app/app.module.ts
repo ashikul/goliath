@@ -31,6 +31,8 @@ import {UserOrders} from '../mocks/providers/userOrders';
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
 import {UserMainPage} from "../pages/UserMain/userMain";
 import {ShopDetailPage} from "../pages/UserShop-detail/shop-detail";
+import {UserOrderMasterPage} from "../pages/UserOrder-master/userOrder-master";
+import {BaristaMainPage} from "../pages/BaristaMain/baristaMain";
 
 
 // The translate loader needs to know where to load i18n files
@@ -78,7 +80,9 @@ let pages = [
   SearchPage,
   UserMainPage,
     ShopMasterPage,
-    ShopDetailPage
+    ShopDetailPage,
+  UserOrderMasterPage,
+    BaristaMainPage
 ];
 
 export function declarations() {

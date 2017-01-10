@@ -21,14 +21,19 @@ export class WelcomePage {
 
     //TODO: make extra pages for barista
     loginBarista() {
-        this.navCtrl.push(LoginPage);
+        this.navCtrl.push(LoginPage, {
+            baristaAccount: true
+        });
     }
 
     //TODO: make normal pages renamed as User
     //TODO: pass state?
     loginUser() {
-        this.navCtrl.push(LoginPage);
+        this.navCtrl.push(LoginPage, {
+            baristaAccount: false
+        });
     }
+ 
 
     signup() {
         this.navCtrl.push(SignupPage);

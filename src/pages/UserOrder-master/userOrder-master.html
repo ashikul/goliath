@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'Your Orders'  }}</ion-title>
+
+    <!--<ion-buttons end>-->
+      <!--<button ion-button icon-only (click)="addShop()">-->
+        <!--<ion-icon name="add"></ion-icon>-->
+      <!--</button>-->
+    <!--</ion-buttons>-->
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let userOrder of currentUserOrders">
+      <button ion-item (click)="showAlert()">
+
+        <ion-grid>
+          <ion-row [ngClass]="{'red': userOrder.status === 'Pickup ready'}">
+            <ion-col  >{{userOrder.status}}</ion-col>
+            <ion-col  >${{userOrder.amount}}</ion-col>
+            <ion-col  >
+
+              <div>
+                {{userOrder.items}}
+              </div>
+            <div>
+              {{userOrder.date}}
+            </div></ion-col>
+
+          </ion-row>
+        </ion-grid>
+
+
+        <!--<ion-note item-right *ngIf="shop.note">{{shop.note}}</ion-note>-->
+      </button>
+
+      <ion-item-options>
+        <!--<button ion-button color="danger" (click)="deleteShop(shop)">-->
+          <!--Delete-->
+        <!--</button>-->
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
