@@ -20,6 +20,7 @@ import { SearchPage } from '../pages/search/search';
 import {ShopMasterPage} from '../pages/UserShop-master/shop-master';
 import { TranslateService } from 'ng2-translate/ng2-translate';
 import {UserMainPage} from "../pages/UserMain/userMain";
+import {BaristaMainPage} from "../pages/BaristaMain/baristaMain";
 
 @Component({
   template: `<ion-menu [content]="content">
@@ -48,20 +49,32 @@ export class MyApp {
   pages: any[] = [
     { title: 'Tutorial', component: TutorialPage },
     { title: 'Welcome', component: WelcomePage },
-    { title: 'Tabs', component: TabsPage },
     { title: 'Cards', component: CardsPage },
     { title: 'Content', component: ContentPage },
     { title: 'Login', component: LoginPage },
-    { title: 'Signup', component: SignupPage },
-    { title: 'Map', component: MapPage },
-    { title: 'Master Detail', component: ListMasterPage },
-    { title: 'Menu', component: MenuPage },
     { title: 'Settings', component: SettingsPage },
     { title: 'Search', component: SearchPage },
-    { title: 'User Main', component: UserMainPage },
-    { title: 'User Shops', component: ShopMasterPage }
+    { title: 'User', component: UserMainPage },
+    { title: 'Barista', component: BaristaMainPage }
   
   ]
+  // pages: any[] = [
+  //   { title: 'Tutorial', component: TutorialPage },
+  //   { title: 'Welcome', component: WelcomePage },
+  //   { title: 'Tabs', component: TabsPage },
+  //   { title: 'Cards', component: CardsPage },
+  //   { title: 'Content', component: ContentPage },
+  //   { title: 'Login', component: LoginPage },
+  //   { title: 'Signup', component: SignupPage },
+  //   { title: 'Map', component: MapPage },
+  //   { title: 'Master Detail', component: ListMasterPage },
+  //   { title: 'Menu', component: MenuPage },
+  //   { title: 'Settings', component: SettingsPage },
+  //   { title: 'Search', component: SearchPage },
+  //   { title: 'User Main', component: UserMainPage },
+  //   { title: 'User Shops', component: ShopMasterPage }
+  //
+  // ]
 
   constructor(translate: TranslateService, platform: Platform, settings: Settings) {
     // Set the default language for translation strings, and the current language.
