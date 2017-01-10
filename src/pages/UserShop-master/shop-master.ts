@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, ModalController } from 'ionic-angular';
 
 //TODO: shop detail
-// import { ShopDetailPage } from '../shop-detail/shop-detail';
+import { ShopDetailPage } from '../UserShop-detail/shop-detail';
 
 import { Shops } from '../../providers/providers';
 import { Shop } from '../../models/shop';
@@ -49,9 +49,10 @@ export class ShopMasterPage {
    * Navigate to the detail page for this shop.
    */
   //TODO: re-add this
-  // openShop(shop: Shop) {
-  //   this.navCtrl.push(ShopDetailPage, {
-  //     shop: shop
-  //   });
-  // }
+  openShop(shop: Shop) {
+    this.navCtrl.push(ShopDetailPage, {
+      shop: shop
+    });
+  }
+
 }

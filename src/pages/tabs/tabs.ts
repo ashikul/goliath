@@ -4,7 +4,6 @@ import { TranslateService } from 'ng2-translate/ng2-translate';
 
 import { Tab1Root } from '../pages';
 import { Tab2Root } from '../pages';
-import { Tab3Root } from '../pages';
 
 @Component({
   selector: 'page-tabs',

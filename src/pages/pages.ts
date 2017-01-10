@@ -4,7 +4,7 @@ import { ListMasterPage } from './list-master/list-master';
 import { SearchPage } from './search/search';
 import { SettingsPage } from './settings/settings';
 import {UserMainPage} from "./UserMain/userMain";
-import {ShopMasterPage} from "./shop-master/shop-master";
+import {ShopMasterPage} from "./UserShop-master/shop-master";
 // import {LoginPage} from "./login/login";
 
 //TODO: set this back to WelcomePage

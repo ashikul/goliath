@@ -19,7 +19,7 @@ import { ItemDetailPage } from '../pages/item-detail/item-detail';
 import { MenuPage } from '../pages/menu/menu';
 import { SettingsPage } from '../pages/settings/settings';
 import { SearchPage } from '../pages/search/search';
-import {ShopMasterPage} from '../pages/shop-master/shop-master';
+import {ShopMasterPage} from '../pages/UserShop-master/shop-master';
 
 import { User } from '../providers/user';
 import { Api } from '../providers/api';

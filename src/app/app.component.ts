@@ -17,7 +17,7 @@ import { ListMasterPage } from '../pages/list-master/list-master';
 import { MenuPage } from '../pages/menu/menu';
 import { SettingsPage } from '../pages/settings/settings';
 import { SearchPage } from '../pages/search/search';
-import {ShopMasterPage} from '../pages/shop-master/shop-master';
+import {ShopMasterPage} from '../pages/UserShop-master/shop-master';
 import { TranslateService } from 'ng2-translate/ng2-translate';
 import {UserMainPage} from "../pages/UserMain/userMain";
 
