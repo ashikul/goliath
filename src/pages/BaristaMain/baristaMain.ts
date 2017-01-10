@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { TranslateService } from 'ng2-translate/ng2-translate';
 
-import { Tab1Root } from '../pages';
-import { Tab2Root } from '../pages';
+import { BaristaTab1Root } from '../pages';
+import { BaristaTab2Root } from '../pages';
+import { Items } from '../../providers/providers';
 
 @Component({
   selector: 'baristaMain',
@@ -11,10 +12,17 @@ import { Tab2Root } from '../pages';
 })
 export class BaristaMainPage {
   //TODO: set this
-  tab1Root: any = Tab1Root;
-  tab2Root: any = Tab2Root;
+  tab1Root: any = BaristaTab1Root;
+  tab2Root: any = BaristaTab2Root;
 
   tab1Title = "Orders";
   tab2Title = "Menu";
+  
+  orderCount: any;
+
+  constructor(public items: Items) {
+    // this.orderCount = this.items.getOrderCount();
+    // this.orderCount = items.getOrderCount();
+  }
 
 }

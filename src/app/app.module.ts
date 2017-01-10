@@ -33,6 +33,8 @@ import {UserMainPage} from "../pages/UserMain/userMain";
 import {ShopDetailPage} from "../pages/UserShop-detail/shop-detail";
 import {UserOrderMasterPage} from "../pages/UserOrder-master/userOrder-master";
 import {BaristaMainPage} from "../pages/BaristaMain/baristaMain";
+import {BaristaOrderPage} from "../pages/BaristaOrder/baristaOrder";
+import {BaristaMenuPage} from "../pages/BaristaMenu/baristaMenu";
 
 
 // The translate loader needs to know where to load i18n files
@@ -55,7 +57,6 @@ export function provideSettings(storage: Storage) {
     option4: 'Hello'
   });
 }
-
 
 /**
  * The Pages array lists all of the pages we want to use in our app.
@@ -82,7 +83,10 @@ let pages = [
     ShopMasterPage,
     ShopDetailPage,
   UserOrderMasterPage,
-    BaristaMainPage
+    BaristaMainPage,
+  BaristaOrderPage,
+    BaristaMenuPage
+    
 ];
 
 export function declarations() {

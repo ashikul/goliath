@@ -1,0 +1,53 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'Orders'  }}</ion-title>
+
+    <!--<ion-buttons end>-->
+      <!--<button ion-button icon-only (click)="addShop()">-->
+        <!--<ion-icon name="add"></ion-icon>-->
+      <!--</button>-->
+    <!--</ion-buttons>-->
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let baristaOrder of currentBaristaOrders">
+      <button ion-item (click)="showAlert()">
+
+        <ion-grid>
+          <ion-row [ngClass]="{'pending': baristaOrder.status === 'Pending', 'complete': baristaOrder.status === 'Complete', 'ready': baristaOrder.status === 'Ready'}">
+            <ion-col  >{{baristaOrder.user}}</ion-col>
+
+
+            <ion-col  >${{baristaOrder.amount}}</ion-col>
+            <ion-col  >
+
+              <div>
+                {{baristaOrder.items}}
+
+
+              </div>
+            <div>
+              {{baristaOrder.message}}
+            </div></ion-col>
+
+          </ion-row>
+        </ion-grid>
+
+
+        <!--<ion-note item-right *ngIf="shop.note">{{shop.note}}</ion-note>-->
+      </button>
+
+      <ion-item-options >
+
+        <button *ngIf="baristaOrder.status === 'Pending'" ion-button color="secondary" (click)="readyOrder(baristaOrder)">
+          Ready
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,17 @@
+baristaOrder {
+  ion-col{
+    padding: 5px;
+  }
+  .red {
+    color: orangered;
+  }
+  .pending{
+    color: indianred;
+  }
+  .complete{
+    color: cornflowerblue;
+  }
+  .ready{
+    color: mediumseagreen;
+  }
+}

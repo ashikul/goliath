@@ -1,0 +1,43 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>{{ 'Your Menu' }}</ion-title>
+
+        <!--<ion-buttons end>-->
+        <!--<button ion-button icon-only (click)="addShop()">-->
+        <!--<ion-icon name="add"></ion-icon>-->
+        <!--</button>-->
+        <!--</ion-buttons>-->
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+        <ion-item-sliding *ngFor="let baristaMenu of currentBaristaMenu">
+            <button ion-item (click)="showAlert()">
+
+                <ion-grid>
+                    <ion-row>
+                        <ion-col>{{baristaMenu.name}}</ion-col>
+
+
+                        <ion-col>${{baristaMenu.price}}</ion-col>
+
+                    </ion-row>
+                </ion-grid>
+
+
+                <!--<ion-note item-right *ngIf="shop.note">{{shop.note}}</ion-note>-->
+            </button>
+
+            <ion-item-options>
+
+                <button ion-button color="primary">
+                    Change
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+</ion-content>
