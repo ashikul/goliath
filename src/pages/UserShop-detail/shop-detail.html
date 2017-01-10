@@ -14,5 +14,28 @@
   <div class="shop-detail" padding>
     <h2>{{shop.name}}</h2>
     <p>{{shop.about}}</p>
+    <p>{{shop.location}}</p>
+    <p>Open: {{shop.hours}}</p>
+
+    <h4>Menu</h4>
+
+    <!---->
+    <!--//TODO: make menu items an array-->
+    <!--<ion-row *ngFor="let menuItem of shop.menu">-->
+      <!--{{menuItem}}-->
+    <!--</ion-row>-->
+
+    <ion-row>
+      Latte ${{shop.menu.Latte}}
+    </ion-row>
+    <ion-row>
+      Coffee ${{shop.menu.Coffe}}
+    </ion-row>
+    <ion-row>
+      Cookie ${{shop.menu.Cookie}}
+    </ion-row>
+
+    <button ion-button block (click)="showAlert()">Order</button>
+
   </div>
 </ion-content>

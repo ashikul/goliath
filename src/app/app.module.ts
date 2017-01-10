@@ -30,6 +30,8 @@ import {UserOrders} from '../mocks/providers/userOrders';
 
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
 import {UserMainPage} from "../pages/UserMain/userMain";
+import {ShopDetailPage} from "../pages/UserShop-detail/shop-detail";
+
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -75,7 +77,8 @@ let pages = [
   SettingsPage,
   SearchPage,
   UserMainPage,
-    ShopMasterPage
+    ShopMasterPage,
+    ShopDetailPage
 ];
 
 export function declarations() {
