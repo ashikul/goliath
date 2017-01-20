@@ -14,6 +14,7 @@ import {SearchPage} from '../pages/search/search';
 import {TranslateService} from 'ng2-translate/ng2-translate';
 import {UserMainPage} from "../pages/UserMain/userMain";
 import {BaristaMainPage} from "../pages/BaristaMain/baristaMain";
+import {StatsPage} from "../pages/stats/stats";
 
 @Component({
     template: `<ion-menu [content]="content" id="menu1">
@@ -52,7 +53,7 @@ import {BaristaMainPage} from "../pages/BaristaMain/baristaMain";
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-    rootPage = BaristaMainPage;
+    rootPage = WelcomePage;
 
     @ViewChild(Nav) nav: Nav;
 
@@ -61,6 +62,8 @@ export class MyApp {
     pages: any[] = [
         {title: 'Main Page', component: UserMainPage},
         {title: 'Subscriptions(Coming Soon)'},
+        {title: 'Logout', component: WelcomePage},
+        {title: 'Tutorial', component: TutorialPage}
 
     ]
 
@@ -68,8 +71,12 @@ export class MyApp {
     //TODO: stats
     //TODO: promote
     pages2: any[] = [
-        {title: 'Main Page', component: BaristaMainPage}
-
+        {title: 'Main Page', component: BaristaMainPage},
+        {title: 'Promote', component: ContentPage},
+        {title: 'Stats', component: StatsPage},
+        {title: 'Settings', component: SettingsPage},
+        {title: 'Logout', component: WelcomePage},
+        {title: 'Tutorial', component: TutorialPage}
 
     ]
 

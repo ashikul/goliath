@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {NavController, MenuController} from 'ionic-angular';
 
 import {LoginPage} from '../login/login';
 import {SignupPage} from '../signup/signup';
@@ -16,7 +16,10 @@ import {SignupPage} from '../signup/signup';
 })
 export class WelcomePage {
 
-    constructor(public navCtrl: NavController) {
+
+    constructor(public navCtrl: NavController, public menu:MenuController){
+        menu.enable(false, 'menu1');
+        menu.enable(false, 'menu2');
     }
 
     //TODO: make extra pages for barista

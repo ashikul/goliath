@@ -35,6 +35,7 @@ import {UserOrderMasterPage} from "../pages/UserOrder-master/userOrder-master";
 import {BaristaMainPage} from "../pages/BaristaMain/baristaMain";
 import {BaristaOrderPage} from "../pages/BaristaOrder/baristaOrder";
 import {BaristaMenuPage} from "../pages/BaristaMenu/baristaMenu";
+import {StatsPage} from "../pages/stats/stats";
 
 
 // The translate loader needs to know where to load i18n files
@@ -84,7 +85,8 @@ let pages = [
   UserOrderMasterPage,
     BaristaMainPage,
   BaristaOrderPage,
-    BaristaMenuPage
+    BaristaMenuPage,
+    StatsPage
     
 ];
 
@@ -105,7 +107,6 @@ export function providers() {
     Items,
       Shops,
       UserOrders,
-
     { provide: Settings, useFactory: provideSettings, deps: [ Storage ] },
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler }
