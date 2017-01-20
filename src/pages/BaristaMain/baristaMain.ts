@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController , MenuController} from 'ionic-angular';
 import { TranslateService } from 'ng2-translate/ng2-translate';
 
 import { BaristaTab1Root } from '../pages';
@@ -20,7 +20,9 @@ export class BaristaMainPage {
   
   orderCount: any;
 
-  constructor(public items: Items) {
+  constructor(public items: Items, public menu:MenuController) {
+    menu.enable(false, 'menu1');
+    menu.enable(true, 'menu2');
     // this.orderCount = this.items.getOrderCount();
     // this.orderCount = items.getOrderCount();
   }

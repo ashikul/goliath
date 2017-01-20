@@ -14,4 +14,13 @@ baristaMenu {
   .ready{
     color: mediumseagreen;
   }
+
+  ion-row{
+    ion-thumbnail{
+      .item-thumbnail{
+        height: 60px;
+        width: 60px;
+      }
+    }
+  }
 }

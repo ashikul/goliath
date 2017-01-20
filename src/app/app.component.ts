@@ -1,32 +1,25 @@
-import { Component, ViewChild } from '@angular/core';
-import { Platform, Nav } from 'ionic-angular';
-import { StatusBar, Splashscreen } from 'ionic-native';
+import {Component, ViewChild} from '@angular/core';
+import {Platform, Nav} from 'ionic-angular';
+import {StatusBar, Splashscreen} from 'ionic-native';
 
-import { Settings } from '../providers/providers';
+import {Settings} from '../providers/providers';
 
-import { FirstRunPage } from '../pages/pages';
-import { CardsPage } from '../pages/cards/cards';
-import { ContentPage } from '../pages/content/content';
-import { LoginPage } from '../pages/login/login';
-import { MapPage } from '../pages/map/map';
-import { SignupPage } from '../pages/signup/signup';
-import { TabsPage } from '../pages/tabs/tabs';
-import { TutorialPage } from '../pages/tutorial/tutorial';
-import { WelcomePage } from '../pages/welcome/welcome';
-import { ListMasterPage } from '../pages/list-master/list-master';
-import { MenuPage } from '../pages/menu/menu';
-import { SettingsPage } from '../pages/settings/settings';
-import { SearchPage } from '../pages/search/search';
-import {ShopMasterPage} from '../pages/UserShop-master/shop-master';
-import { TranslateService } from 'ng2-translate/ng2-translate';
+import {CardsPage} from '../pages/cards/cards';
+import {ContentPage} from '../pages/content/content';
+import {LoginPage} from '../pages/login/login';
+import {TutorialPage} from '../pages/tutorial/tutorial';
+import {WelcomePage} from '../pages/welcome/welcome';
+import {SettingsPage} from '../pages/settings/settings';
+import {SearchPage} from '../pages/search/search';
+import {TranslateService} from 'ng2-translate/ng2-translate';
 import {UserMainPage} from "../pages/UserMain/userMain";
 import {BaristaMainPage} from "../pages/BaristaMain/baristaMain";
 
 @Component({
-  template: `<ion-menu [content]="content">
+    template: `<ion-menu [content]="content" id="menu1">
     <ion-header>
       <ion-toolbar>
-        <ion-title>Pages</ion-title>
+        <ion-title>Goliath Coffee</ion-title>
       </ion-toolbar>
     </ion-header>
 
@@ -39,59 +32,66 @@ import {BaristaMainPage} from "../pages/BaristaMain/baristaMain";
     </ion-content>
 
   </ion-menu>
+  
+  <ion-menu [content]="content" id="menu2">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Goliath Coffee</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <button menuClose ion-item *ngFor="let p of pages2" (click)="openPage(p)">
+          {{p.title}}
+        </button>
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  rootPage = FirstRunPage;
+    rootPage = BaristaMainPage;
 
-  @ViewChild(Nav) nav: Nav;
+    @ViewChild(Nav) nav: Nav;
 
-  pages: any[] = [
-    { title: 'Tutorial', component: TutorialPage },
-    { title: 'Welcome', component: WelcomePage },
-    { title: 'Cards', component: CardsPage },
-    { title: 'Content', component: ContentPage },
-    { title: 'Login', component: LoginPage },
-    { title: 'Settings', component: SettingsPage },
-    { title: 'Search', component: SearchPage },
-    { title: 'User', component: UserMainPage },
-    { title: 'Barista', component: BaristaMainPage }
-  
-  ]
-  // pages: any[] = [
-  //   { title: 'Tutorial', component: TutorialPage },
-  //   { title: 'Welcome', component: WelcomePage },
-  //   { title: 'Tabs', component: TabsPage },
-  //   { title: 'Cards', component: CardsPage },
-  //   { title: 'Content', component: ContentPage },
-  //   { title: 'Login', component: LoginPage },
-  //   { title: 'Signup', component: SignupPage },
-  //   { title: 'Map', component: MapPage },
-  //   { title: 'Master Detail', component: ListMasterPage },
-  //   { title: 'Menu', component: MenuPage },
-  //   { title: 'Settings', component: SettingsPage },
-  //   { title: 'Search', component: SearchPage },
-  //   { title: 'User Main', component: UserMainPage },
-  //   { title: 'User Shops', component: ShopMasterPage }
-  //
-  // ]
 
-  constructor(translate: TranslateService, platform: Platform, settings: Settings) {
-    // Set the default language for translation strings, and the current language.
-    translate.setDefaultLang('en');
-    translate.use('en')
+    //TODO: subscriptions page
+    pages: any[] = [
+        {title: 'Main Page', component: UserMainPage},
+        {title: 'Subscriptions(Coming Soon)'},
 
-    platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      StatusBar.styleDefault();
-      Splashscreen.hide();
-    });
-  }
+    ]
 
-  openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
-  }
+    //TODO: settings
+    //TODO: stats
+    //TODO: promote
+    pages2: any[] = [
+        {title: 'Main Page', component: BaristaMainPage}
+
+
+    ]
+
+    constructor(translate: TranslateService, platform: Platform, settings: Settings) {
+        // Set the default language for translation strings, and the current language.
+        translate.setDefaultLang('en');
+        translate.use('en')
+
+        platform.ready().then(() => {
+            // Okay, so the platform is ready and our plugins are available.
+            // Here you can do any higher level native things you might need.
+            StatusBar.styleDefault();
+            Splashscreen.hide();
+        });
+    }
+
+    openPage(page) {
+        // Reset the content nav to have just this page
+        // we wouldn't want the back button to show in this scenario
+        if (page.component) {
+            this.nav.setRoot(page.component);
+
+        }
+    }
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController , MenuController} from 'ionic-angular';
 import { TranslateService } from 'ng2-translate/ng2-translate';
 
 import { Tab1Root } from '../pages';
@@ -15,5 +15,10 @@ export class UserMainPage {
 
   tab1Title = "Coffee Shops";
   tab2Title = "Orders";
+
+  constructor(public menu:MenuController){
+    menu.enable(true, 'menu1');
+    menu.enable(false, 'menu2');
+  }
 
 }

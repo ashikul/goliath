@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ModalController } from 'ionic-angular';
-
+import { NavController, ModalController,MenuController, AlertController } from 'ionic-angular';
 //TODO: shop detail
 import { ShopDetailPage } from '../UserShop-detail/shop-detail';
 
@@ -13,10 +12,16 @@ import { Shop } from '../../models/shop';
 })
 export class ShopMasterPage {
   currentShops: Shop[];
+  activeMenu: string;
 
-  constructor(public navCtrl: NavController, public shops: Shops, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public shops: Shops, public modalCtrl: ModalController, public menu: MenuController,
+  public alertCtrl: AlertController) {
     this.currentShops = this.shops.query();
+    // menu.enable(false, 'menu1');
+    // menu.enable(true, 'menu2');
   }
+
+
 
   /**
    * The view loaded, let's query our shops for the list
@@ -44,7 +49,35 @@ export class ShopMasterPage {
   // deleteShop(shop) {
   //   this.shops.delete(shop);
   // }
+  showFilter() {
+    let alert = this.alertCtrl.create({
+      title: 'Filter Coffee Shops',
+      subTitle: 'Demo',
+      inputs: [
+        {
+          name: 'Zipcode',
+          placeholder: 'Zipcode',
+          type:'num'
+        }
+      ],
+    });
 
+    // alert.addInput({
+    //   type: 'checkbox',
+    //   label: 'Open Now',
+    //   value: 'value1',
+    //   checked: true
+    // });
+    // alert.addInput({
+    //   type: 'checkbox',
+    //   label: 'Bespin',
+    //   value: 'value2'
+    // });
+    alert.addButton('Cancel');
+    alert.addButton('OK');
+
+    alert.present();
+  }
   /**
    * Navigate to the detail page for this shop.
    */

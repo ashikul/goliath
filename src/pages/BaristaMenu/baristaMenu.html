@@ -1,13 +1,16 @@
 <ion-header>
 
     <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
         <ion-title>{{ 'Your Menu' }}</ion-title>
 
-        <!--<ion-buttons end>-->
-        <!--<button ion-button icon-only (click)="addShop()">-->
-        <!--<ion-icon name="add"></ion-icon>-->
-        <!--</button>-->
-        <!--</ion-buttons>-->
+        <ion-buttons end>
+            <button ion-button icon-only (click)="addItem()">
+                <ion-icon name="create"></ion-icon>
+            </button>
+        </ion-buttons>
     </ion-navbar>
 
 </ion-header>
@@ -20,6 +23,9 @@
 
                 <ion-grid>
                     <ion-row>
+                        <ion-thumbnail item-left>
+                            <img class="item-thumbnail" src="{{baristaMenu.image}}">
+                        </ion-thumbnail>
                         <ion-col>{{baristaMenu.name}}</ion-col>
 
 

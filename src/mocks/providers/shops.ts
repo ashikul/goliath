@@ -60,6 +60,119 @@ export class Shops {
                     "Cookie": 1.55,
                     "Coffee": 2.44
                 }
+            },  {
+                "name": "Burt Bear Coffee Shop",
+                "profilePic": "assets/img/speakers/bear.jpg",
+                "about": "Great Espresso.",
+
+
+                "location": "314 W 11th St, New York, NY 10014",
+                "hours": "8am to 10pm",
+                "menu": {
+                    "Latte": 5.66,
+                    "Cookie": 1.55,
+                    "Coffee": 2.44
+                }
+            },
+            {
+                "name": "Charlie Cheetah Coffee Shop",
+                "profilePic": "assets/img/speakers/cheetah.jpg",
+                "about": "Try holiday latte.",
+                "location": "31 W 91th St, New York, NY 11014",
+                "hours": "8am to 11pm",
+                "menu": {
+                    "Latte": 1.99,
+                    "Cookie": 3.55,
+                    "Coffee": 2.44
+                }
+            },
+            {
+                "name": "Donald Duck Coffee Shop",
+                "profilePic": "assets/img/speakers/duck.jpg",
+                "about": "Quack.",
+                "location": "123 W 19th St, New York, NY 10014",
+                "hours": "6am to 3pm",
+                "menu": {
+                    "Latte": 5.66,
+                    "Cookie": 1.55,
+                    "Coffee": 2.44
+                }
+            },
+            {
+                "name": "Burt Bear Coffee Shop",
+                "profilePic": "assets/img/speakers/bear.jpg",
+                "about": "Great Espresso.",
+
+
+                "location": "314 W 11th St, New York, NY 10014",
+                "hours": "8am to 10pm",
+                "menu": {
+                    "Latte": 5.66,
+                    "Cookie": 1.55,
+                    "Coffee": 2.44
+                }
+            },
+            {
+                "name": "Charlie Cheetah Coffee Shop",
+                "profilePic": "assets/img/speakers/cheetah.jpg",
+                "about": "Try holiday latte.",
+                "location": "31 W 91th St, New York, NY 11014",
+                "hours": "8am to 11pm",
+                "menu": {
+                    "Latte": 1.99,
+                    "Cookie": 3.55,
+                    "Coffee": 2.44
+                }
+            },
+            {
+                "name": "Donald Duck Coffee Shop",
+                "profilePic": "assets/img/speakers/duck.jpg",
+                "about": "Quack.",
+                "location": "123 W 19th St, New York, NY 10014",
+                "hours": "6am to 3pm",
+                "menu": {
+                    "Latte": 5.66,
+                    "Cookie": 1.55,
+                    "Coffee": 2.44
+                }
+            },
+            {
+                "name": "Burt Bear Coffee Shop",
+                "profilePic": "assets/img/speakers/bear.jpg",
+                "about": "Great Espresso.",
+
+
+                "location": "314 W 11th St, New York, NY 10014",
+                "hours": "8am to 10pm",
+                "menu": {
+                    "Latte": 5.66,
+                    "Cookie": 1.55,
+                    "Coffee": 2.44
+                }
+            },
+            {
+                "name": "Charlie Cheetah Coffee Shop",
+                "profilePic": "assets/img/speakers/cheetah.jpg",
+                "about": "Try holiday latte.",
+                "location": "31 W 91th St, New York, NY 11014",
+                "hours": "8am to 11pm",
+                "menu": {
+                    "Latte": 1.99,
+                    "Cookie": 3.55,
+                    "Coffee": 2.44
+                }
+            },
+            {
+                "name": "Donald Duck Coffee Shop",
+                "profilePic": "assets/img/speakers/duck.jpg",
+                "about": "Quack.",
+                "location": "123 W 19th St, New York, NY 10014",
+                "hours": "6am to 3pm",
+                "menu": {
+                    "Latte": 5.66,
+                    "Cookie": 1.55,
+                    "Coffee": 2.44
+                }
             }
         ];
 

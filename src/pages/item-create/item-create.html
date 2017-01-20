@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ 'ITEM_CREATE_TITLE' | translate }}</ion-title>
+    <ion-title>{{ 'New Menu Item(Demo)' | translate }}</ion-title>
     <ion-buttons start>
       <button ion-button (click)="cancel()">
         <span color="primary" showWhen="ios">Cancel</span>
@@ -36,7 +36,10 @@
         <ion-input type="text" placeholder="Name" formControlName="name"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input type="text" placeholder="About" formControlName="about"></ion-input>
+        <ion-input type="text" placeholder="Description" formControlName="about"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="num" placeholder="Price" ></ion-input>
       </ion-item>
     </ion-list>
   </form>

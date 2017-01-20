@@ -57,7 +57,6 @@ export function provideSettings(storage: Storage) {
     option4: 'Hello'
   });
 }
-
 /**
  * The Pages array lists all of the pages we want to use in our app.
  * We then take these pages and inject them into our NgModule so Angular
