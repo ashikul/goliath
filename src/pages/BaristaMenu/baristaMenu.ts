@@ -20,24 +20,24 @@ export class BaristaMenuPage {
         {
             "name": "Latte",
             "price": 5.99
-            , "image": "../../assets/img/coffee/lattle.jpg"
+            , "image": "assets/img/coffee/lattle.jpg"
         },
         {
             "name": "Cookie",
             "price": 2.99
-            , "image": "../../assets/img/coffee/cookie.jpeg"
+            , "image": "assets/img/coffee/cookie.jpeg"
         }, {
             "name": "Black Coffee",
             "price": 1.99
-            ,"image": "../../assets/img/coffee/coffee.JPG"
+            ,"image": "assets/img/coffee/coffee.JPG"
         }, {
             "name": "Tea",
             "price": 2.99
-            ,"image": "../../assets/img/coffee/coffee.JPG"
+            ,"image": "assets/img/coffee/coffee.JPG"
         }, {
             "name": "Espresso",
             "price": 3.99
-            ,"image": "../../assets/img/coffee/coffee.JPG"
+            ,"image": "assets/img/coffee/coffee.JPG"
         }
     ];
 
@@ -69,16 +69,16 @@ export class BaristaMenuPage {
     //     let url = "";
     //     switch(random){
     //         case 1:
-    //             url = "../../assets/img/coffee/coffee.JPG";
+    //             url = "assets/img/coffee/coffee.JPG";
     //             break;
     //         case 2:
-    //             url = "../../assets/img/coffee/latte.jpeg";
+    //             url = "assets/img/coffee/latte.jpeg";
     //             break;
     //         case 3:
-    //             url = "../../assets/img/coffee/cookie.jpeg";
+    //             url = "assets/img/coffee/cookie.jpeg";
     //             break;
     //         default:
-    //             url = "../../assets/img/coffee/coffee.JPG";
+    //             url = "assets/img/coffee/coffee.JPG";
     //             break;
     //     }
     //
